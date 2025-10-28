@@ -1,13 +1,12 @@
 // Define a class named NumbersValidator
 class NumbersValidator {
-  
   // Method to check if a number is even
   // @param {Number} number - The number to be checked
   // @return {Boolean} - Returns true if the number is even, false otherwise
   isNumberEven(number) {
     // Determine the type of the passed argument
     const typeOfVariable = typeof number;
-    
+
     // If the type is not number, throw an error
     if (typeOfVariable !== 'number') {
       throw new Error(`[${number}] is not of type "Number" it is of type "${typeOfVariable}"`);
@@ -23,7 +22,7 @@ class NumbersValidator {
   getEvenNumbersFromArray(arrayOfNumbers) {
     // Check if the input is an array and if every item is of type number
     if (Array.isArray(arrayOfNumbers) && arrayOfNumbers.every(item => typeof item === 'number')) {
-      // Use the filter method to apply isNumberEven on each element and return an array of even numbers
+      // Use the filter method to apply isNumberEven on each element and return an array of even nbr
       return arrayOfNumbers.filter(this.isNumberEven);
     }
     // If the input is not an array of numbers, throw an error
